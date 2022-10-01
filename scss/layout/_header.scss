@@ -1,0 +1,27 @@
+.header {
+  width: 100%;
+  height: pxToRem(52);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  &__navbar {
+    padding: 0 !important;
+    background-color: rgba($color: #ffffff, $alpha: 0.6) !important;
+    .container-lg {
+      padding: 0 1rem;
+    }
+  }
+  &__logo {
+    padding: pxToRem(16) 0 pxToRem(10);
+    &__img {
+      height: pxToRem(30);
+      padding: 0;
+    }
+  }
+  &__link {
+    text-transform: none !important;
+    color: $color-black !important;
+    @include font("Poppins", 600, 24);
+  }
+}

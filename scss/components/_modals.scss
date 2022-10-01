@@ -1,0 +1,92 @@
+.verify {
+  position: relative;
+  &__body {
+    margin: 80px 50px 30px;
+  }
+  &__img-1 {
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 200px;
+    overflow: hidden;
+  }
+  &__img-2 {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 300px;
+  }
+  &__logo {
+    padding: 0 0 20px;
+    height: 200px;
+    width: auto;
+    display: block;
+    margin: auto;
+  }
+  .line_divider {
+    margin: 20px auto;
+  }
+  &__title {
+    @include font("Poppins", 600, $font-size-title);
+    text-align: center;
+  }
+  &__content {
+    @include font("Poppins", 400, 20);
+    text-align: center;
+    margin: 25px 0;
+  }
+  &__content1 {
+    @include font("Poppins", 400, $font-size-content);
+    text-align: center;
+    margin: 25px 0;
+  }
+  &__input {
+    outline: none;
+    border-radius: 30px;
+    border: 3px solid $color-grey-dark-1;
+    @include font("Poppins", 400, $font-size-subtitle);
+    padding: 10px;
+    display: block;
+    width: 75%;
+    margin: 20px auto 10px;
+    transition: 0.3s;
+    text-align: center;
+  }
+  &__radio {
+    display: block;
+    width: 100%;
+    margin: auto;
+    text-align: center;
+    @include font("Poppins", 400, $font-size-subtitle);
+  }
+  &__input:focus {
+    border: 3px solid $color-primary;
+  }
+  &__link {
+    @include font("Poppins", 400, $font-size-content);
+    text-decoration: underline;
+    color: $color-grey-dark-4;
+    display: block;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+  &__submit {
+    border: none;
+    outline: none;
+    @include font("Poppins", 600, $font-size-title);
+    border-radius: 30px;
+    padding: 8px 10px;
+    color: white;
+    background-color: $color-primary;
+    display: block;
+    width: 60%;
+    margin: 25px auto 10px;
+  }
+  &__submit:hover {
+    box-shadow: 2px 2px 5px $color-grey-dark-1;
+  }
+  &__submit:active {
+    box-shadow: none;
+  }
+}

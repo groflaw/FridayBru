@@ -1,0 +1,181 @@
+.line_wrap {
+  position: relative;
+  .left_to_center {
+    height: pxToRem(110);
+    .first_line {
+      position: absolute;
+      right: pxToRem(70);
+      width: pxToRem(2);
+      z-index: -9;
+      height: pxToRem(70);
+      border-left: 2px dashed $color-primary-light;
+    }
+    .second_line {
+      position: absolute;
+      left: 50%;
+      right: pxToRem(70);
+      top: pxToRem(70);
+      height: 2px;
+      border-top: 2px dashed $color-primary-light;
+    }
+    .third_line {
+      position: absolute;
+      left: 50%;
+      top: pxToRem(70);
+      width: pxToRem(2);
+      height: pxToRem(40);
+      border-left: 2px dashed $color-primary-light;
+    }
+  }
+  .center_to_both {
+    height: pxToRem(100);
+    .first_line {
+      position: absolute;
+      left: 50%;
+      top: pxToRem(-120);
+      height: pxToRem(160);
+      width: 0;
+      border-right: 2px dashed $color-primary;
+      @media screen and (max-width: 768px) {
+        top: pxToRem(-50);
+        height: pxToRem(150);
+      }
+      z-index: -99;
+    }
+    .mid_line {
+      position: absolute;
+      left: 25%;
+      height: 0;
+      width: 50%;
+      border-top: 2px dashed $color-primary;
+      top: pxToRem(40);
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .left_line {
+      position: absolute;
+      left: 25%;
+      top: pxToRem(40);
+      height: pxToRem(50);
+      width: 0;
+      border-left: 2px dashed $color-primary;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    .right_line {
+      position: absolute;
+      left: 75%;
+      top: pxToRem(40);
+      height: pxToRem(50);
+      width: 0;
+      border-left: 2px dashed $color-primary;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+  }
+  .right_to_center {
+    height: pxToRem(100);
+    z-index: -99;
+    .first_line {
+      position: absolute;
+      left: 25%;
+      width: pxToRem(0);
+      z-index: -9;
+      height: pxToRem(180);
+      top: pxToRem(-130);
+      border-left: 2px dashed $color-primary-light;
+    }
+    .second_line {
+      position: absolute;
+      left: 25%;
+      right: pxToRem(70);
+      top: pxToRem(50);
+      width: 25%;
+      height: 0;
+      border-top: 2px dashed $color-primary-light;
+    }
+    .third_line {
+      position: absolute;
+      left: 50%;
+      top: pxToRem(50);
+      width: pxToRem(2);
+      height: pxToRem(40);
+      border-left: 2px dashed $color-primary-light;
+    }
+  }
+  .center_to_center {
+    height: pxToRem(100);
+    .line {
+      position: absolute;
+      left: 50%;
+      width: 0;
+      height: pxToRem(90);
+      border-left: pxToRem(2) dashed $color-primary;
+    }
+  }
+  .center_to_left {
+    height: pxToRem(100);
+    .first_line {
+      position: absolute;
+      left: 50%;
+      top: 0;
+      height: pxToRem(40);
+      width: 0;
+      border-right: 2px dashed $color-primary;
+      z-index: -99;
+    }
+    .second_line {
+      position: absolute;
+      left: 25%;
+      height: 0;
+      width: 25%;
+      border-top: 2px dashed $color-primary;
+      top: pxToRem(40);
+    }
+    .third_line {
+      position: absolute;
+      left: 25%;
+      top: pxToRem(40);
+      height: pxToRem(50);
+      width: 0;
+      border-left: 2px dashed $color-primary;
+    }
+  }
+}
+
+.line_divider {
+  width: 60%;
+  margin: pxToRem(50) auto;
+  height: 0;
+  border-top: pxToRem(3) solid $color-primary;
+}
+
+.line_divider_right {
+  position: absolute;
+  left: 50%;
+  width: 50%;
+  height: 0;
+  border-top: pxToRem(3) solid $color-primary;
+}
+
+.line_divider_left {
+  position: absolute;
+  left: 0;
+  width: 50%;
+  height: 0;
+  border-top: pxToRem(3) solid $color-primary;
+}
+
+.line_divider_dashed {
+  border-bottom: 3px dashed $color-primary;
+  width: 80%;
+  height: 50px;
+  margin: auto;
+  margin-bottom: 100px;
+}
+.line-break {
+  width: 100%;
+}

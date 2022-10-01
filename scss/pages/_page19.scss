@@ -1,0 +1,300 @@
+.page19 {
+  .content {
+    .container {
+      height: 500px;
+    }
+    &__container {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-image: url("../../img/images/page19/page19_content_bg.jpg");
+      @media screen and (max-width: 768px) {
+        background-image: url("../../img/images/person.jpg");
+        background-position-x: left;
+        background-size: 340px auto;
+        background-position: center;
+      }
+      background-size: 50% 100%;
+      background-repeat: no-repeat;
+      background-position: right;
+      position: relative;
+      .auth_form {
+        &__header {
+          color: #fcc01f;
+        }
+        position: absolute;
+        left: 8%;
+        top: 140px;
+        width: 40%;
+        &__inputs {
+          input[type="button"] {
+            background-color: black;
+          }
+        }
+        @media screen and (max-width: 768px) {
+          position: initial;
+          width: 80%;
+          margin: auto;
+          text-align: center;
+        }
+        @media screen and (min-width: 768px) and (max-width: 992px) {
+          top: 80px;
+        }
+      }
+    }
+  }
+
+  .page19-dark-card {
+    border-radius: 20px;
+    padding-bottom: 0;
+    background-image: url("../../img/images/page19/page19_dark_card-img.jpg");
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.795);
+    .dark-card-body {
+      padding: 20px 10px;
+      border-radius: 0 0 20px 20px;
+      color: white;
+      background-color: rgba($color: #000000, $alpha: 0.6);
+      margin-top: 200px;
+      .dark-card-content {
+        @include font("Poppins", 400, $font-size-content);
+        padding-bottom: 15px;
+      }
+      .dark-card-sign {
+        @include font("Poppins", 400, $font-size-content);
+        text-transform: uppercase;
+        padding-bottom: 20px;
+      }
+      .card_link {
+        @include font("Poppins", 400, $font-size-subtitle);
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+      }
+      .dark-card-footer {
+        margin-top: 20px;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+        .footer-left {
+          display: inline-block;
+          @include font("Poppins", 400, $font-size-content);
+        }
+        .footer-right {
+          float: right;
+          @include font("Poppins", 400, $font-size-content);
+        }
+      }
+    }
+  }
+
+  .page19-card {
+    border-radius: 20px;
+    background-color: white;
+    overflow: hidden;
+    margin-bottom: 20px;
+    box-shadow: 2px 2px 8px rgba(39, 39, 39, 0.795);
+    .card_img {
+      width: 100%;
+      border-radius: 20px;
+    }
+    .card_title {
+      margin-bottom: 0;
+      padding: 10px;
+      @include font("Poppins", 600, $font-size-subtitle);
+    }
+    .card_content {
+      @include font("Poppins", 400, $font-size-content);
+      padding: 0 10px;
+    }
+    .card_sign {
+      @include font("Poppins", 400, $font-size-content);
+      text-transform: uppercase;
+      padding: 0 10px;
+    }
+    .card_link {
+      padding: 10px 10px 0px 10px;
+
+      .card_more {
+        @include font("Poppins", 400, $font-size-subtitle);
+        padding: 5px 10px;
+        border-radius: 20px;
+        background-color: black;
+        text-decoration: none;
+        color: white;
+        text-transform: uppercase;
+        display: inline-block;
+      }
+      .social-icons {
+        float: right;
+        &__link {
+          padding: 0 3px;
+        }
+      }
+    }
+    .card_link::after {
+      content: "";
+      display: table;
+      width: 100%;
+      margin: 10px 0;
+      border-bottom: 2px dashed black;
+      height: 0;
+    }
+    .card_footer {
+      padding: 0 10px;
+      text-transform: uppercase;
+      .footer-left {
+        display: inline-block;
+        @include font("Poppins", 400, $font-size-content);
+      }
+      .footer-right {
+        float: right;
+        @include font("Poppins", 400, $font-size-content);
+      }
+    }
+  }
+
+  .btn_more {
+    padding: 10px 15px;
+    border-radius: 20px;
+    @include font("Poppins", 400, $font-size-subtitle);
+    text-align: center;
+    color: white;
+    background-color: $color-primary;
+    width: 50%;
+    margin: 40px auto;
+    display: block;
+    text-transform: uppercase;
+    cursor: pointer;
+    @media screen and (min-width: 576px) {
+      width: 30%;
+    }
+  }
+
+  .btn_more:hover {
+    box-shadow: 2px 4px 8px rgba(39, 39, 39, 0.795);
+  }
+
+  .btn_more:active {
+    box-shadow: none;
+  }
+
+  .feature {
+    &__header {
+      @include font("Poppins", 800, $font-size-header);
+      padding-bottom: 30px;
+    }
+  }
+
+  .special {
+    &__body {
+      height: 500px;
+      background-image: url("../../img/images/page19/page19_special_bg.jpg");
+      @media screen and (max-width: 768px) {
+        background-image: url("../../img/images/cloud.jpg");
+        background-position: left;
+        background-size: cover;
+      }
+      background-size: 45% 100%;
+      background-repeat: no-repeat;
+      background-position: right;
+      .btn_more {
+        margin: 30px 0;
+        width: fit-content;
+        @media screen and (min-width: 576px) {
+          width: fit-content;
+        }
+      }
+    }
+    &__header {
+      padding-top: 130px;
+      @include font("Poppins", 800, $font-size-header);
+    }
+    &__content {
+      padding-top: 20px;
+      @include font("Poppins", 400, $font-size-content);
+    }
+    .line_wrap {
+      .left_to_center {
+        .first_line {
+          display: none;
+        }
+        .second_line {
+          width: 75%;
+          left: -5%;
+        }
+        .third_line {
+          left: -5%;
+          height: 100px;
+        }
+      }
+    }
+
+    &__view_header {
+      @include font("Poppins", 800, $font-size-header);
+      margin: 10px 0 30px;
+    }
+  }
+
+  .share {
+    &__header {
+      margin-top: 100px;
+    }
+    margin-bottom: 60px;
+  }
+
+  .latest {
+    margin-top: 150px;
+    &__header {
+      @include font("Poppins", 600, $font-size-header);
+      margin-bottom: 40px;
+    }
+  }
+
+  .menu {
+    &__body {
+      height: 310px;
+      background-color: black;
+      background-image: url("../../img/images/page19/page19_menu_bg.jpg");
+      background-size: auto 100%;
+      background-repeat: no-repeat;
+      background-position: left;
+      .btn_more {
+        color: white;
+        background-color: black;
+        margin: 20px;
+        width: fit-content;
+        @media screen and (min-width: 576px) {
+          width: fit-content;
+        }
+      }
+    }
+    &__header {
+      padding-top: 50px;
+      padding-left: 20px;
+      @include font("Poppins", 800, $font-size-header);
+      @media screen and (max-width: 420px) {
+        padding-top: 20px;
+        margin-bottom: 0;
+        padding-left: 0;
+        text-align: center;
+      }
+    }
+    &__content {
+      padding-top: 20px;
+      padding-left: 30px;
+      @include font("Poppins", 400, $font-size-content);
+      @media screen and (max-width: 420px) {
+        padding-top: 10px;
+        padding-left: 0;
+      }
+    }
+  }
+}

@@ -1,0 +1,9 @@
+.carousel-indicators li {
+  width: 15px;
+  height: 15px;
+  border-radius: 100%;
+  background-color: $color-grey-dark-4;
+}
+.carousel-indicators li.active {
+  background-color: $color-primary-light;
+}

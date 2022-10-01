@@ -1,0 +1,29 @@
+.account_card {
+  position: absolute;
+  top: -150px;
+  background-color: white;
+  border-radius: 25px;
+  padding: 20px;
+  margin-bottom: 20px;
+  box-shadow: 2px 4px 6px $color-grey-dark-1;
+  @media screen and (max-width: 768px) {
+    position: initial;
+  }
+  .account_card_header {
+    @include font("Poppins", 600, $font-size-title);
+  }
+  .account_card_body {
+    list-style-image: url("../../img/SVG/books.svg");
+
+    li {
+      @include font("Poppins", 400, $font-size-subtitle);
+      padding: 8px 0;
+      ul {
+        list-style-type: lower-latin;
+        li {
+          @include font("Poppins", 400, $font-size-content);
+        }
+      }
+    }
+  }
+}

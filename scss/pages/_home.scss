@@ -1,0 +1,294 @@
+.home {
+  .content {
+    .container-fluid {
+      height: 500px;
+    }
+    &__container {
+      // max-width: pxToRem(1750);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-image: url("../../img/images/content_background.jpg");
+      @media screen and (max-width: 768px) {
+        background-image: url("../../img/images/person.jpg");
+        background-position-x: left;
+        background-size: 340px auto;
+        background-position: center;
+      }
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+    .news {
+      position: absolute;
+      bottom: pxToRem(-50);
+      right: 0;
+
+      &__img {
+        height: 25vh;
+        width: auto;
+      }
+    }
+  }
+
+  .about {
+    margin-top: pxToReg(10);
+    position: relative;
+    &__left-img {
+      width: 100%;
+      height: auto;
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    &__right-img {
+      width: 100%;
+      height: auto;
+      @include mirror();
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    &__header {
+      @include font("Poppins", 900, $font-size-header);
+      text-align: center;
+      text-transform: uppercase;
+      margin-bottom: 0;
+    }
+    &__header-underline {
+      position: absolute;
+      left: 50%;
+      width: pxToRem(220);
+      @media screen and (max-width: 768px) {
+        width: 30%;
+      }
+      height: pxToRem(0);
+      border-bottom: pxToRem(4) solid $color-primary;
+    }
+    &__subtitle {
+      margin-top: pxToRem(10);
+      @include font("Poppins", 400, $font-size-subtitle);
+      text-align: center;
+      background-color: $body-bg;
+    }
+    &__content {
+      margin-top: pxToRem(30);
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+      background-color: $body-bg;
+    }
+  }
+
+  .idea {
+    &__header {
+      padding-top: pxToRem(30);
+      text-transform: uppercase;
+      text-align: center;
+      @include font("Poppins", 500, $font-size-title);
+    }
+    &__content {
+      padding-top: pxToRem(10);
+      text-align: center;
+      @include font("Poppins", 400, $font-size-content);
+    }
+  }
+
+  .vision {
+    margin-top: pxToRem(40);
+    background-color: $body-bg;
+    &__img {
+      width: 100%;
+      height: auto;
+      min-height: pxToRem(420);
+    }
+    &__body {
+      padding-top: pxToRem(140);
+      @media only screen and (max-width: 768px) {
+        padding-top: pxToRem(20);
+      }
+      position: relative;
+    }
+    &__header {
+      @include font("Poppins", 900, $font-size-header);
+      text-transform: uppercase;
+      margin-bottom: 0;
+      @media screen and (max-width: 768px) {
+        text-align: center;
+      }
+    }
+    &__header-underline {
+      position: absolute;
+      left: 10%;
+      width: pxToRem(110);
+      height: pxToRem(0);
+      border-bottom: pxToRem(4) solid $color-primary;
+      @media screen and (max-width: 768px) {
+        left: 50%;
+      }
+    }
+    &__content {
+      margin-top: pxToRem(15);
+      @include font("Poppins", 400, $font-size-content);
+      background-color: $body-bg;
+    }
+    &__helper {
+      padding-left: pxToRem(18);
+      border: none;
+      transition: 0.4s;
+      cursor: pointer;
+    }
+    &__helper:hover {
+      border-left: pxToRem(6) solid $color-primary;
+    }
+  }
+
+  .benefits {
+    &__header {
+      text-align: center;
+      @include font("Poppins", 900, $font-size-header);
+      margin-bottom: 0;
+      position: relative;
+    }
+    &__header-underline {
+      position: absolute;
+      left: 50%;
+      width: pxToRem(170);
+      border-bottom: pxToRem(4) solid $color-primary;
+    }
+    &__img {
+      width: 100%;
+      height: auto;
+      max-height: pxToRem(460);
+    }
+    &__body {
+      margin-top: pxToRem(100);
+      @media screen and (max-width: 992px) {
+        margin-top: pxToRem(30);
+      }
+      ul {
+        list-style: none;
+        padding-left: pxToRem(20);
+        background-color: $body-bg;
+      }
+      ul li {
+        margin-top: pxToRem(15);
+        @include font("Poppins", 400, 18);
+      }
+      ul li::before {
+        display: inline-block;
+        width: 0;
+        height: 0;
+        border-top: solid transparent;
+        border-bottom: solid transparent;
+        border-left: solid $color-black;
+        border-width: 7px;
+        content: " ";
+        margin-right: 10px;
+      }
+    }
+    &__title {
+      @include font("Poppins", 500, $font-size-title);
+      border-left: pxToRem(6) solid $color-primary;
+      padding-left: pxToRem(10);
+    }
+  }
+
+  .reply {
+    height: 600px;
+    &__bg {
+      background-image: url("../../img/images/cloud.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+      height: 600px;
+    }
+    &__carousel {
+      height: 600px;
+    }
+    &__avatar {
+      align-items: center;
+      width: 70%;
+      min-width: 80px;
+      height: auto;
+      border-radius: 50%;
+      margin: auto;
+      display: block;
+      margin-top: pxToRem(100);
+      @media screen and (max-width: 768px) {
+        margin-top: pxToRem(20);
+        width: 100px;
+      }
+    }
+    &__right {
+      margin-top: pxToRem(90);
+      @media screen and (max-width: 768px) {
+        margin-top: pxToRem(20);
+      }
+    }
+    &__name {
+      @include font("Poppins", 600, 18);
+      padding-left: pxToRem(10);
+      border-left: pxToRem(6) solid $color-primary;
+    }
+    &__name-red {
+      @include font("Poppins", 400, 16);
+      color: $color-primary;
+      padding-top: pxToRem(5);
+    }
+    &__content {
+      @include font("Poppins", 400, 16);
+      padding-top: pxToRem(15);
+      padding-left: pxToRem(18);
+    }
+  }
+
+  .next {
+    &__header {
+      @include font("Poppins", 800, 36);
+      color: $color-primary;
+      line-height: pxToRem(50);
+    }
+    &__content {
+      @include font("Poppins", 400, 24);
+    }
+    .form__inputs {
+      margin-top: pxToRem(20);
+      display: flex;
+      @include font("Poppins", 400, 16);
+      input[type="text"] {
+        border-radius: pxToRem(10) 0 0 pxToRem(10);
+        outline: none;
+        padding: pxToRem(10);
+        background-color: transparent;
+        min-width: pxToRem(120);
+        transition: 0.5s;
+        border: pxToRem(2) solid $color-grey-dark-1;
+      }
+      input[type="text"]:focus {
+        border: pxToRem(2) solid $color-primary-light;
+      }
+      input[type="button"] {
+        border-radius: 0 pxToRem(10) pxToRem(10) 0;
+        outline: none;
+        border: none;
+        padding: pxToRem(10);
+        background-color: $color-primary;
+        color: $color-white;
+      }
+      input[type="button"]:hover {
+        background-color: $color-primary-light;
+      }
+    }
+    &__helper {
+      margin-top: pxToRem(20);
+      @include font("Poppins", 400, $font-size-helper);
+    }
+    &__img {
+      width: 100%;
+      height: 100%;
+    }
+  }
+}

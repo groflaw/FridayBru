@@ -1,0 +1,71 @@
+.auth_form {
+  position: absolute;
+  right: pxToRem(80);
+  left: 50%;
+  top: 160px;
+  @media screen and (max-width: 768px) {
+    position: initial;
+    width: 80%;
+    margin: auto;
+    text-align: center;
+  }
+
+  &__header {
+    @include font("Poppins", 900, $font-size-header);
+  }
+  &__content {
+    @include font("Poppins", 400, $font-size-content);
+  }
+  &__inputs {
+    @include font("Poppins", 400, $font-size-content);
+    display: flex;
+    @media screen and (max-width: 768px) {
+      justify-content: center;
+    }
+    @media screen and (max-width: 576px) {
+      display: grid;
+      margin: auto;
+    }
+    input[type="text"] {
+      border-radius: pxToRem(10) 0 0 pxToRem(10);
+      outline: none;
+      padding: pxToRem(10);
+      background-color: transparent;
+      min-width: pxToRem(120);
+      transition: 0.3s;
+      border: pxToRem(2) solid $color-grey-dark-1;
+      @media screen and (max-width: 576px) {
+        display: block;
+        border-radius: pxToRem(10);
+        margin-bottom: 10px;
+        width: 100%;
+      }
+    }
+    input[type="text"]:focus {
+      border: pxToRem(2) solid $color-primary-light;
+    }
+    input[type="button"] {
+      border-radius: 0 pxToRem(10) pxToRem(10) 0;
+      outline: none;
+      border: none;
+      padding: pxToRem(10);
+      background-color: $color-primary;
+      color: $color-white;
+      box-shadow: none;
+      transition: 0.3s;
+      @media screen and (max-width: 576px) {
+        display: block;
+        border-radius: pxToRem(10);
+      }
+    }
+    input[type="button"]:hover {
+      background-color: $color-primary-light;
+      box-shadow: 0 0 12px $color-grey-dark-2;
+    }
+  }
+  &__helper {
+    padding-top: pxToRem(10);
+    @include font("Poppins", 300, $font-size-helper);
+    color: $color-grey-dark-1;
+  }
+}

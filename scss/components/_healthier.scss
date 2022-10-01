@@ -1,0 +1,37 @@
+.healthier {
+  &__title {
+    margin-top: 40px;
+    @include font("Poppins", 800, $font-size-title);
+    text-align: center;
+    background-image: url("../../img/images/healthier_bg.jpg");
+    background-size: 50% 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-position-x: right;
+  }
+  &__content {
+    display: block;
+    margin: 30px auto;
+    text-align: center;
+    width: 50%;
+    @include font("Poppins", 400, $font-size-content);
+  }
+  .auth_form {
+    position: initial;
+    width: 70%;
+    margin: 20px auto;
+    display: block;
+    input[type="text"] {
+      width: 65%;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+    input[type="button"] {
+      width: 35%;
+      @media screen and (max-width: 576px) {
+        width: 100%;
+      }
+    }
+  }
+}

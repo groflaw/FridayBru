@@ -1,0 +1,33 @@
+$html-font-size: 16px;
+
+// Strip units like 'px' from value
+@function stripUnit($value) {
+  @return $value / ($value * 0 + 1);
+}
+
+// Convert pixels to rems
+@function pxToRem($pxValue) {
+  @return #{stripUnit($pxValue) / stripUnit($html-font-size)}rem;
+}
+
+@mixin font($family, $weight, $size: 24, $style: initial) {
+  font-family: $family;
+  font-weight: $weight;
+  font-size: #{pxToRem($size)};
+  font-style: $style;
+}
+
+@mixin rotate($degree) {
+  -webkit-transform: rotate(#{$degree}deg);
+  -moz-transform: rotate(#{$degree}deg);
+  -o-transform: rotate(#{$degree}deg);
+  -ms-transform: rotate(#{$degree}deg);
+  transform: rotate(#{$degree}deg);
+}
+
+@mixin mirror() {
+  -moz-transform: scale(-1, 1);
+  -o-transform: scale(-1, 1);
+  -webkit-transform: scale(-1, 1);
+  transform: scale(-1, 1);
+}

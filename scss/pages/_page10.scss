@@ -1,0 +1,127 @@
+.page10 {
+  .content {
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    &__img-1 {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 200px;
+      height: auto;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__img-2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+    }
+    &__header {
+      @include font("Poppins", 600, $font-size-header);
+      line-height: 50px;
+      color: $color-primary;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      padding-left: 30px;
+      padding-bottom: 20px;
+      border-left: 6px solid $color-primary;
+      border-bottom: 3px dashed $color-primary;
+      @media screen and(max-width: 992px) {
+        left: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        left: 30px;
+        padding-left: 10px;
+        text-shadow: 2px 2px 5px white;
+      }
+    }
+  }
+
+  .line_wrap {
+    .left_to_center {
+      .first_line {
+        right: 25%;
+      }
+      .second_line {
+        right: 25%;
+      }
+    }
+  }
+  .line_divider {
+    margin: 0 auto;
+    width: 50%;
+  }
+  .strive {
+    &__container {
+      background-image: url("../../img/images/cloud_bg.jpg");
+      background-size: 100% auto;
+      background-repeat: repeat-y;
+    }
+    &__header {
+      @include font("Poppins", 800, $font-size-title);
+      margin: 80px 20px 10px;
+      text-align: center;
+    }
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      margin: 30px 20px;
+      text-align: center;
+    }
+    .line_divider_dashed {
+      width: 50%;
+      margin-bottom: 70px;
+    }
+    .reply {
+      height: 600px;
+      &__carousel {
+        height: 600px;
+      }
+      &__avatar {
+        align-items: center;
+        width: 150px;
+        min-width: 80px;
+        height: auto;
+        border-radius: 50%;
+        margin: auto;
+        display: block;
+      }
+      &__name {
+        margin-top: 30px;
+        @include font("Poppins", 600, $font-size-subtitle);
+        text-transform: uppercase;
+        text-align: center;
+        color: $color-primary;
+      }
+      &__content {
+        @include font("Poppins", 400, $font-size-content);
+        padding-top: pxToRem(15);
+        padding-left: pxToRem(18);
+        text-align: center;
+      }
+    }
+  }
+
+  .reviewform {
+    margin-bottom: 100px;
+    &__header {
+      @include font("Poppins", 600, $font-size-title);
+      text-align: center;
+      margin-top: 50px;
+    }
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+      margin-top: 30px;
+      margin-bottom: 30px;
+    }
+    .submit_btn {
+      background-color: $color-primary;
+    }
+  }
+}

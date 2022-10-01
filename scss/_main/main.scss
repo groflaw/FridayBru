@@ -1,0 +1,32 @@
+@charset "UTF-8";
+
+// 1. Configuration and helpers
+@import "../abstracts/variables", "../abstracts/functions",
+  "../abstracts/mixins";
+
+// 2. Vendors extensions (modifiers)
+@import "../vendors-extensions/bootstrap";
+
+// 3. Vendors
+@import "../vendors/bootstrap/bootstrap",
+  "../vendors/owl-carousel/owl.carousel.scss";
+
+// 4. Base stuff
+@import "../base/base", "../base/fonts", "../base/typography", "../base/helpers";
+
+// 5. Layout-related sections
+@import "../layout/header", "../layout/navbar", "../layout/footer";
+
+// 6. Components
+@import "../components/button", "../components/list", "../components/icon",
+  "../components/project", "../components/blog", "../components/social-icons",
+  "../components/line", "../components/carousel", "../components/share",
+  "../components/healthier", "../components/auth-form",
+  "../components/account_card", "../components/input", "../components/modals";
+
+// 7. Page-specific styles
+@import "../pages/home", "../pages/page15", "../pages/page18", "../pages/page17",
+  "../pages/page19", "../pages/page20", "../pages/page21", "../pages/page22",
+  "../pages/page24", "../pages/page23", "../pages/page26", "../pages/page10";
+
+// 8. Themes

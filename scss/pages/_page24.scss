@@ -1,0 +1,113 @@
+.page24 {
+  .content {
+    .container {
+      height: 500px;
+    }
+    &__container {
+      // max-width: pxToRem(1750);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-image: url("../../img/images/account_bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+  }
+  .account__container {
+    position: relative;
+  }
+  .gifts {
+    &__header {
+      @include font("Poppins", 800, $font-size-header);
+      margin-bottom: 20px;
+      text-align: left;
+      margin-bottom: 30px;
+      display: inline-block;
+    }
+    &__subheader {
+      @include font("Poppins", 300, $font-size-content);
+      margin-top: 10px;
+      width: 340px;
+    }
+    &__referral {
+      float: right;
+      width: fit-content;
+      @media screen and (max-width: 1092px) {
+        float: none;
+        margin: 0 auto 20px;
+      }
+      padding: pxToRem(5);
+      background-color: $color-primary;
+      color: white;
+      @include font("Poppins", 600, 16);
+      border-radius: pxToRem(30);
+      align-items: center;
+      display: flex;
+      &-count {
+        background-color: white;
+        color: black;
+        @include font("Poppins", 600, 18);
+        border-radius: 50%;
+        width: fit-content;
+        margin-left: 5px;
+        padding: 3px 5px;
+      }
+    }
+  }
+  .share {
+    background-image: url("../../img/images/cloud_bg.jpg");
+    background-size: auto 100%;
+    &__left {
+      background-color: $color-primary;
+      @media screen and (max-width: 572px) {
+        margin-bottom: 20px;
+      }
+    }
+    &__link-email-header {
+      margin-top: 40px;
+      @include font("Poppins", 600, $font-size-title);
+      margin-bottom: 20px;
+    }
+    &__link-email-content {
+      @include font("Poppins", 400, $font-size-content);
+      margin-bottom: 40px;
+      color: $color-grey-dark-2;
+    }
+    .link-content {
+      margin-top: 60px;
+    }
+    &__link-email-input {
+      @include font("Poppins", 400, $font-size-content);
+      padding: 10px;
+      border: none;
+      border-bottom: 2px solid $color-grey-dark-1;
+      outline: none;
+      width: 100%;
+      background-color: transparent;
+      transition: 0.4s;
+    }
+    &__link-email-input:focus {
+      border-bottom: 2px solid $color-primary;
+    }
+    &__link-email-btn {
+      @include font("Poppins", 400, $font-size-content);
+      background-color: black;
+      color: white;
+      padding: 10px;
+      border-radius: 20px;
+      width: 100%;
+      outline: none;
+      border: none;
+    }
+    &__link-email-btn:hover {
+      background-color: rgba(19, 16, 16, 0.76);
+    }
+    &__link-email-helper {
+      @include font("Poppins", 400, $font-size-helper);
+      color: $color-grey-dark-1;
+    }
+  }
+}

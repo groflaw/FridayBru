@@ -1,0 +1,40 @@
+.social-icons {
+  display: flex;
+  align-items: center;
+  &__link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: pxToRem(5);
+  }
+
+  &__icon {
+    width: pxToRem(24);
+    height: pxToRem(24);
+    fill: $color-grey-light-1;
+  }
+
+  &__facebook {
+    fill: rgb(66, 9, 104);
+  }
+  &__twitter {
+    fill: rgb(51, 191, 216);
+  }
+  &__whatsapp {
+    fill: rgb(10, 36, 34);
+  }
+  &__instagram {
+    fill: rgb(224, 24, 24);
+  }
+  &__linkedin {
+    fill: rgb(9, 16, 119);
+  }
+
+  &--lg &__icon {
+    width: pxToRem(28);
+    height: pxToRem(28);
+  }
+  &--lg &__link {
+    padding: pxToRem(5) pxToRem(7);
+  }
+}

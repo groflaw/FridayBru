@@ -1,0 +1,70 @@
+.page21 {
+  .content {
+    .container {
+      height: 500px;
+    }
+    &__container {
+      // max-width: pxToRem(1750);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100%;
+      background-image: url("../../img/images/account_bg.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-position: center;
+      position: relative;
+    }
+  }
+  .account__container {
+    position: relative;
+  }
+  .article {
+    &__header {
+      @include font("Poppins", 800, $font-size-header);
+      margin-bottom: 20px;
+    }
+    &__body {
+      border-bottom: 3px dashed $color-primary;
+    }
+    &__img {
+      width: 100%;
+      border-radius: 10px;
+      margin-top: 20px;
+    }
+    &__title {
+      @include font("Poppins", 600, $font-size-title);
+      margin-top: 20px;
+    }
+    &__subtitle {
+      @include font("Poppins", 400, $font-size-subtitle);
+    }
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      margin-bottom: 20px;
+    }
+    &__action {
+      margin-bottom: 20px;
+    }
+    &__more {
+      @include font("Poppins", 600, $font-size-subtitle);
+      color: #fecf07;
+      display: inline-block;
+    }
+    .social-icons {
+      float: right;
+
+      .social-icons__link {
+        width: 30px;
+      }
+      .social-icons__icon {
+        fill: black;
+      }
+    }
+    &__pagination {
+      display: block;
+      width: fit-content;
+      margin: 20px auto;
+    }
+  }
+}
