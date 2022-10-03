@@ -1,0 +1,137 @@
+.page9 {
+  .content {
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    &__img-1 {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 200px;
+      height: auto;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__img-2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      opacity: 1 !important;
+      @media screen and (max-width: 768px) {
+        opacity: 0.5 !important;
+      }
+    }
+    &__header {
+      @include font("Poppins", 800, $font-size-header);
+      line-height: 50px;
+      color: $color-primary;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      padding-bottom: 20px;
+      border-bottom: 6px solid $color-primary;
+      @media screen and(max-width: 992px) {
+        left: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        left: 30px;
+        padding-left: 10px;
+        text-shadow: 2px 2px 5px white;
+      }
+    }
+    &__title {
+      @include font("Poppins", 600, $font-size-title);
+      color: $color-primary;
+      position: absolute;
+      top: 290px;
+      left: 210px;
+      @media screen and (max-width: 992px) {
+        left: 60px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        left: 40px;
+        text-shadow: 3px 4px 8px white;
+      }
+    }
+  }
+
+  .line_wrap {
+    .left_to_center {
+      .first_line {
+        right: 25%;
+      }
+      .second_line {
+        right: 25%;
+      }
+    }
+  }
+  .line_divider {
+    margin: 0 auto;
+    width: 50%;
+  }
+
+  .serve {
+    &__title {
+      @include font("Poppins", 600, $font-size-title);
+      text-align: center;
+    }
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+    }
+    &__card {
+      background-color: $color-primary;
+      padding: 30px 20px;
+      &-title {
+        @include font("Poppins", 600, $font-size-title);
+        text-align: center;
+        color: #fecf07;
+      }
+      &-content {
+        @include font("Poppins", 400, $font-size-content);
+        text-align: center;
+        color: white;
+      }
+    }
+    .line_wrap {
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__3card {
+      &-img {
+        display: block;
+        width: 40%;
+        margin: auto;
+      }
+      &-header {
+        @include font("Poppins", 600, $font-size-subtitle);
+        text-align: center;
+      }
+      &-content {
+        @include font("Poppins", 400, $font-size-content);
+        text-align: center;
+      }
+    }
+    &__brandcard {
+      padding: 10px 0 10px 20px;
+      border-left: 4px solid $color-primary;
+      &-title {
+        @include font("Poppins", 600, $font-size-title);
+      }
+      &-content {
+        @include font("Poppins", 400, $font-size-content);
+      }
+      &-more {
+        @include font("Poppins", 600, $font-size-subtitle);
+        color: #fecf07;
+        text-transform: uppercase;
+      }
+    }
+  }
+}

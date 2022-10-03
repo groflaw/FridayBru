@@ -1,0 +1,166 @@
+.page5 {
+  .content {
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    &__img-1 {
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: auto;
+      height: 100%;
+      @media screen and (max-width: 992px) {
+        width: 100%;
+        height: 100%;
+      }
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    &__img-2 {
+      position: absolute;
+      top: 0;
+      right: 0;
+      height: 80%;
+    }
+    &__header {
+      @include font("Poppins", 600, $font-size-header);
+      line-height: 50px;
+      color: $color-primary;
+      position: absolute;
+      top: 100px;
+      left: 120px;
+      padding-left: 30px;
+      padding-bottom: 20px;
+      border-left: 6px solid $color-primary;
+      border-bottom: 3px dashed $color-primary;
+      @media screen and(max-width: 992px) {
+        left: 50px;
+        text-shadow: 2px 2px 5px white;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        left: 30px;
+        padding-left: 10px;
+      }
+      @media screen and (max-width: 576px) {
+        top: 150px;
+      }
+    }
+    &__body {
+      position: absolute;
+      @include font("Poppins", 400, $font-size-content);
+      top: 230px;
+      left: 120px;
+      width: 50%;
+      @media screen and (max-width: 1200px) {
+        width: 45%;
+      }
+      @media screen and (max-width: 992px) {
+        left: 50px;
+        text-shadow: 2px 2px 5px white;
+      }
+      @media screen and (max-width: 576px) {
+        display: none;
+      }
+    }
+    &__name {
+      @include font("Poppins", 400, $font-size-title);
+      color: $color-primary;
+      position: absolute;
+      top: 85%;
+      left: 76%;
+      @media screen and (max-width: 576px) {
+        left: initial;
+        right: 28%;
+        top: 90%;
+      }
+    }
+  }
+
+  .line_wrap {
+    .left_to_center {
+      .first_line {
+        top: -70px;
+        height: 140px;
+        right: 25%;
+      }
+      .second_line {
+        right: 25%;
+      }
+    }
+  }
+
+  .marketing {
+    &__title {
+      @include font("Poppins", 600, $font-size-title);
+      text-align: center;
+      &-underline {
+        width: 25%;
+        margin-left: 25%;
+        border-bottom: 4px solid $color-primary;
+        margin-bottom: 20px;
+      }
+    }
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    &__vision-img {
+      width: 90%;
+      display: block;
+      margin: auto;
+    }
+    &__right-header {
+      @include font("Poppins", 600, $font-size-subtitle);
+      padding: 20px 0;
+    }
+    &__right {
+      border-bottom: 4px dashed $color-primary;
+    }
+    &__right-subtitle {
+      @include font("Poppins", 400, $font-size-content);
+      padding-top: 20px;
+    }
+    &__right-percent {
+      @include font("Poppins", 600, $font-size-title);
+      color: $color-primary;
+      padding-bottom: 20px;
+    }
+    // how portion
+    &__how {
+      background-image: url("../../img/images/cloud_bg.jpg");
+      background-size: 50% auto;
+      background-position: left;
+    }
+    &__how-title {
+      @include font("Poppins", 600, $font-size-title);
+    }
+    &__how-content {
+      @include font("Poppins", 400, $font-size-content);
+    }
+    &__how-img {
+      width: 100%;
+    }
+  }
+
+  .reach {
+    &__content {
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+    }
+    &__title {
+      @include font("Poppins", 600, $font-size-title);
+      text-align: center;
+    }
+    .submit_btn {
+      width: fit-content;
+      padding: 8px;
+      border-radius: 10px;
+      display: block;
+      margin: auto;
+    }
+  }
+}

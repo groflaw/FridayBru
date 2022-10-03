@@ -1,0 +1,68 @@
+.page4 {
+  .content {
+    .container {
+      height: 500px;
+      position: relative;
+    }
+    &__img-1 {
+      position: absolute;
+      top: 0px;
+      left: 0;
+      width: 200px;
+      height: auto;
+      @media screen and (max-width: 768px) {
+        display: none;
+      }
+    }
+    &__img-2 {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+      height: 100%;
+      opacity: 1 !important;
+      @media screen and (max-width: 768px) {
+        opacity: 0.5 !important;
+      }
+    }
+    &__header {
+      @include font("Poppins", 800, $font-size-header);
+      line-height: 50px;
+      color: $color-primary;
+      position: absolute;
+      top: 200px;
+      left: 200px;
+      padding-left: 20px;
+      border-left: 6px solid $color-primary;
+      @media screen and(max-width: 992px) {
+        left: 50px;
+      }
+      @media screen and (max-width: 768px) {
+        text-align: center;
+        left: 30px;
+        padding-left: 10px;
+        text-shadow: 2px 2px 5px white;
+      }
+    }
+  }
+
+  .policy {
+    &__header {
+      @include font("Poppins", 600, $font-size-title);
+      padding-bottom: 20px;
+      border-bottom: 4px solid $color-primary;
+    }
+    &__content {
+      padding-top: 20px;
+      @include font("Poppins", 400, $font-size-content);
+    }
+    &__story-title {
+      @include font("Poppins", 600, $font-size-title);
+      text-align: center;
+    }
+    &__story-content {
+      @include font("Poppins", 400, $font-size-content);
+      text-align: center;
+      margin-top: 30px;
+    }
+  }
+}
