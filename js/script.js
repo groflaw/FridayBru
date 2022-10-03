@@ -408,3 +408,15 @@ sr.reveal(
     interval: 300,
   }
 );
+
+//page25
+sr.reveal(
+  ".values__header, .values__subtitle, .values__card, .values__2card, .card3__cardbox",
+  {
+    origin: "bottom",
+    distance: "30px",
+    duration: 800,
+    delay: 400,
+    interval: 400,
+  }
+);
